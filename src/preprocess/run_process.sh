@@ -1,0 +1,22 @@
+lang_src=$1
+lang_trg=$2
+freq_num_src=$3
+freq_num_trg=$4
+
+rm *.pkl *.h5
+
+#This will create a dictionary (vocab.*.pkl) of freq_num* most frequent words 
+#and a pickle file (binarized_text.*.pkl) that contains a list of numpy arrays 
+#of which each corresponds to each line in the text files.
+python preprocessold.py -d vocab.${lang_src}.pkl -v ${freq_num_src} -b binarized_text.${lang_src}.pkl -p *${lang_src}
+python preprocessold.py -d vocab.${lang_trg}.pkl -v ${freq_num_trg} -b binarized_text.${lang_trg}.pkl -p *${lang_trg}
+python invert-dict.py vocab.${lang_src}.pkl ivocab.${lang_src}.pkl
+python invert-dict.py vocab.${lang_trg}.pkl ivocab.${lang_trg}.pkl
+
+#This will convert the generated pickle file into an HDF5 format.
+python convert-pkl2hdf5.py binarized_text.${lang_src}.pkl binarized_text.${lang_src}.h5
+python convert-pkl2hdf5.py binarized_text.${lang_trg}.pkl binarized_text.${lang_trg}.h5
+
+#This will shuffle the dataset.
+python shuffle-hdf5.py binarized_text.${lang_src}.h5 binarized_text.${lang_trg}.h5 binarized_text.${lang_src}.shuf.h5 binarized_text.${lang_trg}.shuf.h5
+

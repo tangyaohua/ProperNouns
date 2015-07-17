@@ -1,0 +1,55 @@
+\documentclass{article}
+
+\usepackage{txfonts}
+%\usepackage{amssymb}
+%\usepackage{fancyhdr}
+\usepackage{ctex}
+\let\iint\undefined
+\let\iiint\undefined
+\let\iiiint\undefined
+\let\idotsint\undefined
+%\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{float}
+\usepackage{verbatim}
+\usepackage{listings}
+\newtheorem{lemma}{Lemma}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\newtheorem{corollary}{Corollary}
+\usepackage{graphicx}
+%\usepackage{authblk}
+%\textheight=720pt
+\usepackage[top=1in, bottom=1.1in, left=1.25in, right=1.25in]{geometry}
+%\linespread{1.25}
+%\phone{86-18701698932}
+%\usepackage[scaled]{uarial}
+%\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{booktabs}%for \toprule
+
+%\bibliographystyle{plain}
+%\newcommand*{\MyPath}{../Notes}%
+\graphicspath{{./Fig/}{fig/}}
+
+\makeindex
+\begin{document}
+\begin{itemize}
+
+\item[1. ] Proper Nouns Vocabulary $\{English~ phrase:~ Chinese~ phrase\}$ 
+
+\item[2. ] Pre-process: we annotate our training data using the following scheme.
+\begin{itemize}
+\item English sentence: I love Huawei $\rightarrow$ I love Sxxx
+\item Chinese sentence: 我~ 爱 ~华为 $\rightarrow$ 我~ 爱~ Txxx0
+\end{itemize}
+Proper nouns in source sentences are substituted with a unique token Sxxx, while proper nouns in target sentences are denoted as Txxxd(for $d$ in -7,\dots,7 or n) to simultaneously denote (a) the fact that a word is a proper noun and (b) its relative position $d$ with respect to its aligned source word. The alignment can be computed with the Berkeley aligner.
+
+\item[3. ] Train: we use state of art NMT system to train our annotated datasets and obtain our model. 
+
+\item[4. ] Post-process: we use the model to translate the sentences in the test set and replace the tokens Txxxd in the system's output with a translation of its aligned source word, using the Proper Nouns Vocabulary. 
+\end{itemize}
+
+\end{document}
