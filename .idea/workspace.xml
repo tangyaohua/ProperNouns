@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77b07422-7da6-442d-81c5-c1ea530d8646" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/unkStats.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/state.py" afterPath="$PROJECT_DIR$/src/state.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/unkStats.py" afterPath="$PROJECT_DIR$/src/unkStats.py" />
     </list>
     <ignored path="ProperNouns.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -63,8 +61,8 @@
       <file leaf-file-name="unkStats.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/unkStats.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3159609" vertical-offset="3831" max-vertical-offset="4761">
-              <caret line="175" column="45" selection-start-line="175" selection-start-column="45" selection-end-line="175" selection-end-column="45" />
+            <state vertical-scroll-proportion="0.39087948" vertical-offset="657" max-vertical-offset="4761">
+              <caret line="39" column="63" selection-start-line="39" selection-start-column="63" selection-end-line="39" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -823,8 +821,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/unkStats.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3159609" vertical-offset="3831" max-vertical-offset="4761">
-          <caret line="175" column="45" selection-start-line="175" selection-start-column="45" selection-end-line="175" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.39087948" vertical-offset="657" max-vertical-offset="4761">
+          <caret line="39" column="63" selection-start-line="39" selection-start-column="63" selection-end-line="39" selection-end-column="63" />
           <folding />
         </state>
       </provider>

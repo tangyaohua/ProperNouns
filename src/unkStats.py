@@ -37,11 +37,11 @@ parser.add_argument("-t", "--char", action="store_true",
                     help="character-level processing")
 parser.add_argument("-l", "--lowercase", action="store_true",
                     help="lowercase")
-parser.add_argument('-a', '--align',default='preprocess/align.txt',
+parser.add_argument('-a', '--align',default='preprocess/align',
                     help='the name of the align file')
-parser.add_argument('-ts', '--target',default='preprocess/chinese.txt',
+parser.add_argument('-ts', '--target',default='preprocess/chinese',
                     help='the name of the target(chinese) file')
-parser.add_argument('-ss', '--source',default='preprocess/english.txt',
+parser.add_argument('-ss', '--source',default='preprocess/english',
                     help='the name of the source(english) file')
 
 
