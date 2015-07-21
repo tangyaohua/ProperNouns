@@ -242,6 +242,7 @@ def prototype_encdec_state():
 
     state['target'] = ["/home/tangyaohua/ProperNouns/src/data/binarized_text.xinhua_u8.ch.shuf.h5"]
     state['source'] = ["/home/tangyaohua/ProperNouns/src/data/binarized_text.xinhua_u8.en.shuf.h5"]
+    state['align']  = ["/home/tangyaohua/ProperNouns/src/data/align.shuf.h5"]
     state['indx_word'] = "/home/tangyaohua/ProperNouns/src/data/ivocab.xinhua_u8.en.pkl"
     state['indx_word_target'] = "/home/tangyaohua/ProperNouns/src/data/ivocab.xinhua_u8.ch.pkl"
     state['word_indx'] = "/home/tangyaohua/ProperNouns/src/data/vocab.xinhua_u8.en.pkl"
