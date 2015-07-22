@@ -240,13 +240,13 @@ def prototype_encdec_state():
 
     state = prototype_state()
 
-    state['target'] = ["/home/tangyaohua/ProperNouns/src/data/binarized_text.xinhua_u8.ch.shuf.h5"]
-    state['source'] = ["/home/tangyaohua/ProperNouns/src/data/binarized_text.xinhua_u8.en.shuf.h5"]
-    state['align']  = ["/home/tangyaohua/ProperNouns/src/data/align.shuf.h5"]
-    state['indx_word'] = "/home/tangyaohua/ProperNouns/src/data/ivocab.xinhua_u8.en.pkl"
-    state['indx_word_target'] = "/home/tangyaohua/ProperNouns/src/data/ivocab.xinhua_u8.ch.pkl"
-    state['word_indx'] = "/home/tangyaohua/ProperNouns/src/data/vocab.xinhua_u8.en.pkl"
-    state['word_indx_trgt'] = "/home/tangyaohua/ProperNouns/src/data/vocab.xinhua_u8.ch.pkl"
+    state['target'] = ["/home/tangyaohua/ProperNouns/src/preprocess/binarized_text.chinese.shuf.h5"]
+    state['source'] = ["/home/tangyaohua/ProperNouns/src/preprocess/binarized_text.english.shuf.h5"]
+    state['align']  = ["/home/tangyaohua/ProperNouns/src/preprocess/align.shuf.h5"]
+    state['indx_word'] = "/home/tangyaohua/ProperNouns/src/preprocess/ivocab.english.pkl"
+    state['indx_word_target'] = "/home/tangyaohua/ProperNouns/src/preprocess/ivocab.chinese.pkl"
+    state['word_indx'] = "/home/tangyaohua/ProperNouns/src/preprocess/vocab.english.pkl"
+    state['word_indx_trgt'] = "/home/tangyaohua/ProperNouns/src/preprocess/vocab.chinese.pkl"
 
     state['null_sym_source'] = 10000
     state['null_sym_target'] = 10000

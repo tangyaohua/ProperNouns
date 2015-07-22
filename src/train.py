@@ -83,7 +83,7 @@ def main():
     logger.debug("State:\n{}".format(pprint.pformat(state)))
 
     rng = numpy.random.RandomState(state['seed'])
-    enc_dec = RNNEncoderDecoder(state, rng, args.skip_init)
+    enc_dec = RNNEncoderDecoder(state, rng, args.skip_init, True)
     enc_dec.build()
     lm_model = enc_dec.create_lm_model()
 
