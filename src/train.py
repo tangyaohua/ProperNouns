@@ -11,12 +11,17 @@ from groundhog.trainer.SGD_adadelta import SGD as SGD_adadelta
 from groundhog.trainer.SGD import SGD as SGD
 from groundhog.trainer.SGD_momentum import SGD as SGD_momentum
 from groundhog.mainLoop import MainLoop
-#from experiments.nmt import RNNEncoderDecoder, prototype_state, get_batch_iterator
-#import experiments.nmt
 
 from encdec import RNNEncoderDecoder
-from state import prototype_state, prototype_search_state
 from encdec import get_batch_iterator
+from encdec import parse_input
+from encdec import create_padded_batch
+
+from state import\
+    prototype_state,\
+    prototype_phrase_state,\
+    prototype_encdec_state,\
+    prototype_search_state
 
 logger = logging.getLogger(__name__)
 
@@ -66,10 +71,7 @@ def parse_args():
 def main():
     args = parse_args()
 
-    # state = prototype_search_state()
     state = eval(args.proto)()
-    print state['tangyaohua']
-
     if args.state:
         if args.state.endswith(".py"):
             state.update(eval(open(args.state).read()))
@@ -83,7 +85,7 @@ def main():
     logger.debug("State:\n{}".format(pprint.pformat(state)))
 
     rng = numpy.random.RandomState(state['seed'])
-    enc_dec = RNNEncoderDecoder(state, rng, args.skip_init, True)
+    enc_dec = RNNEncoderDecoder(state, rng, args.skip_init)
     enc_dec.build()
     lm_model = enc_dec.create_lm_model()
 

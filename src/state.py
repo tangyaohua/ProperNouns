@@ -242,7 +242,6 @@ def prototype_encdec_state():
 
     state['target'] = ["/home/tangyaohua/ProperNouns/src/preprocess/binarized_text.chinese.shuf.h5"]
     state['source'] = ["/home/tangyaohua/ProperNouns/src/preprocess/binarized_text.english.shuf.h5"]
-    state['align']  = ["/home/tangyaohua/ProperNouns/src/preprocess/align.shuf.h5"]
     state['indx_word'] = "/home/tangyaohua/ProperNouns/src/preprocess/ivocab.english.pkl"
     state['indx_word_target'] = "/home/tangyaohua/ProperNouns/src/preprocess/ivocab.chinese.pkl"
     state['word_indx'] = "/home/tangyaohua/ProperNouns/src/preprocess/vocab.english.pkl"
@@ -277,7 +276,6 @@ def prototype_search_state():
     state['seqlen'] = 50
     state['sort_k_batches'] = 20
     state['prefix'] = 'search_'
-    state['tangyaohua']='shenyufang'
 
     return state
 
