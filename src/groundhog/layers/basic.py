@@ -16,8 +16,8 @@ import logging
 import theano
 import theano.tensor as TT
 from theano.sandbox.rng_mrg import MRG_RandomStreams as RandomStreams
-from groundhog.utils import utils
-from groundhog.utils.utils import id_generator
+from ..utils import utils
+from ..utils.utils import id_generator
 
 logger = logging.getLogger(__name__)
 

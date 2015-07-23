@@ -19,7 +19,7 @@ import theano.tensor as TT
 from theano.sandbox.scan import scan
 from theano.sandbox.rng_mrg import MRG_RandomStreams as RandomStreams
 
-from groundhog.utils import print_time, print_mem, const
+from ..utils import print_time, print_mem, const
 
 logger = logging.getLogger(__name__)
 

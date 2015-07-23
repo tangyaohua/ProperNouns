@@ -11,8 +11,10 @@ import networkx as nx
 
 import numpy
 
-import experiments.nmt
-from experiments.nmt import RNNEncoderDecoder, parse_input
+
+from encdec import RNNEncoderDecoder
+from encdec import parse_input
+
 
 import theano
 import theano.tensor as TT

@@ -14,8 +14,7 @@ import theano
 import theano.tensor as TT
 from theano.sandbox.rng_mrg import MRG_RandomStreams as RandomStreams
 
-from groundhog import utils
-from groundhog.utils import sample_weights, \
+from ..utils import sample_weights, \
         sample_weights_classic,\
         sample_weights_orth, \
         init_bias, \

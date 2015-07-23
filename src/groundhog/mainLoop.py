@@ -33,7 +33,7 @@ import gzip
 import time
 import signal
 
-from groundhog.utils import print_mem, print_time
+from utils import print_mem, print_time
 
 
 class MainLoop(object):

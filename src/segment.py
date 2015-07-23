@@ -11,11 +11,17 @@ import logging
 import numpy
 import time
 from itertools import izip, product
-from experiments.nmt import RNNEncoderDecoder, prototype_state, parse_input, create_padded_batch
-from experiments.nmt.sample import BeamSearch
-from experiments.nmt.sample import sample as sample_func
+from sample import BeamSearch
+from sample import sample as sample_func
 from collections import defaultdict
 import operator
+
+from encdec import RNNEncoderDecoder
+from encdec import get_batch_iterator
+from encdec import parse_input
+from encdec import create_padded_batch
+
+from state import prototype_state
 
 cache = dict()
 

@@ -9,13 +9,15 @@ import sys
 
 import numpy
 
-import experiments.nmt
-from experiments.nmt import\
+from encdec import\
     RNNEncoderDecoder,\
-    prototype_state,\
     parse_input
-
-from experiments.nmt.numpy_compat import argpartition
+from state import\
+    prototype_state,\
+    prototype_phrase_state,\
+    prototype_encdec_state,\
+    prototype_search_state
+from numpy_compat import argpartition
 
 logger = logging.getLogger(__name__)
 
