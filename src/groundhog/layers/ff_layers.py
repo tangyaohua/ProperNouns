@@ -16,7 +16,7 @@ import theano
 import theano.tensor as TT
 from theano.sandbox.rng_mrg import MRG_RandomStreams as RandomStreams
 
-
+from ..utils import *
 from ..utils import sample_weights, \
             sample_weights_classic,\
             init_bias, \
