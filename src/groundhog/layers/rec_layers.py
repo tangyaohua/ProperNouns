@@ -18,6 +18,7 @@ import theano.tensor as TT
 from theano.sandbox.scan import scan
 from theano.sandbox.rng_mrg import MRG_RandomStreams as RandomStreams
 
+from ..utils import *
 from ..utils import sample_weights, \
         sample_weights_classic,\
         sample_weights_orth, \
